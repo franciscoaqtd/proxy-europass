@@ -2,11 +2,11 @@
   "name": "proxy-europass",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+    "express": "^4.17.1"
   }
 }
