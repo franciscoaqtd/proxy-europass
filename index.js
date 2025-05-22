@@ -7,7 +7,11 @@ app.get("/", async (req, res) => {
   const url = `https://europa.eu/europass/learning-opportunities-api/api/v1/opportunities?country=${country}&limit=${limit}`;
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+      }
+    });
     const data = await response.json();
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.json(data);
